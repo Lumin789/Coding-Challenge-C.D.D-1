@@ -1,0 +1,375 @@
+/* Les fonts */
+/* Roboto Condensed */
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('./fonts/Roboto Condensed/RobotoCondensed-Light.woff2') format('woff2'),
+        url('./fonts/Roboto Condensed/RobotoCondensed-Light.woff') format('woff'),
+        url('./fonts/Roboto Condensed/RobotoCondensed-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('./fonts/Roboto Condensed/RobotoCondensed-Regular.woff2') format('woff2'),
+        url('./fonts/Roboto Condensed/RobotoCondensed-Regular.woff') format('woff'),
+        url('./fonts/Roboto Condensed/RobotoCondensed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* Source Sans Pro */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('./fonts/Source Sans Pro/SourceSansPro-ExtraLight.woff2') format('woff2'),
+        url('./fonts/Source Sans Pro/SourceSansPro-ExtraLight.woff') format('woff'),
+        url('./fonts/Source Sans Pro/SourceSansPro-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Tout reset */
+*, *:before, *:after{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    font-size: 100%;
+    font: inherit;
+}
+
+html, body{
+    margin: 0;
+    font-family: 'Roboto Condensed';
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    overflow-x: hidden;
+}
+
+/* La sélection */
+::-moz-selection{
+    color: #FFFEFF;
+    background-color: #662F32;
+}
+::selection{
+    color: #FFFEFF;
+    background-color: #662F32;
+}
+
+/* Pour ne pas avoir de bugs de couleurs des liens et autres */
+a, p, li, h1, h2, h3, h4, h5, h6{
+    color: rgb(0, 0, 0);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+/* La navbar */
+.topbar-nav{
+    margin-top: 25px;
+}
+.navbar{
+    text-align: center;
+    padding: 0 0 50px 0;
+    margin-top: 38px;
+}
+.navbar:first-child{
+    padding-left: 0;
+}
+.navbar:last-child{
+    padding-right: 0;
+}
+
+/* Les boutons de la navbar */
+.bouton-nav{
+    padding: 40px;
+    color: #735557;
+    -webkit-transition: .2s color;
+    -o-transition: .2s color;
+    transition: .2s color;
+    -webkit-transition: .2s background-color;
+    -o-transition: .2s background-color;
+    transition: .2s background-color;
+}
+.bouton-nav:hover{
+    background-color: #662F32;
+    color: #FFFEFF;
+}
+.active{
+    color: #FFFEFF;
+    background-color: #662F32;
+}
+
+/* Le h1, le titre */
+.first-title{
+    text-align: center;
+    width: auto;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+/* Le "Home" */
+.brown{
+    color: #633132;
+    -webkit-transition: .6s padding;
+    -o-transition: .6s padding;
+    transition: .6s padding;
+    -webkit-transition: .4s letter-spacing;
+    -o-transition: .4s letter-spacing;
+    transition: .4s letter-spacing;
+    font-weight: bold;
+    cursor: pointer;
+}
+.brown:hover{
+    letter-spacing: 2px;
+    padding: 0 4px;
+}
+
+/* Un titre un peu excentré du vrai titre */
+.brown2{
+    color: #633132;
+}
+
+/* La suite du body */
+.img-cover{
+    background: url("Coding-Challenge_assets/img/slider2.jpg") no-repeat;
+    background: url("Coding-Challenge_assets/img/slider3.jpeg") no-repeat;
+    background: url("Coding-Challenge_assets/img/slider1.jpg") no-repeat;
+    min-width: 100vw;
+    height: 100vh;
+    margin-bottom: 6rem;
+    /* Pour la @keyframe plus bas */
+    -webkit-animation: change-image 12s infinite;
+            animation: change-image 12s infinite;
+}
+
+/* Les cards */
+/* Les cards en général */
+.cards{
+    display: block;
+}
+.title-card{
+    text-align: center;
+    min-width: 400px;
+    background: #662F32;
+    color: #D0DDFF;
+    padding: 10px 90px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+}
+.left, .middle, .right{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* L'image du milieu */
+.card-img{
+    min-width: 400px;
+}
+/* Le texte des cards */
+.txt-cards{
+    color: #FFEED1;
+    background: #645955;
+    text-align: initial;
+    margin: auto;
+    margin-top: -4px;
+    width: 400px;
+    height: auto;
+}
+.txt-cards p{
+    padding: .5rem 0 0 1rem;
+}
+.txt-cards p::first-letter{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Les petits coins des cards */
+.img-div{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+}
+/* Pour tout bien placer */
+.d-none{
+    margin-bottom: -4px;
+    margin-right: -45px;
+    opacity: 0;
+    -webkit-transition: .3s opacity;
+    -o-transition: .3s opacity;
+    transition: .3s opacity;
+    z-index: 99;
+    cursor: pointer;
+}
+.d-none-h{
+    opacity: 1;
+    margin-bottom: -4px;
+    z-index: 11;
+}
+.d-none:hover{
+    opacity: 1;
+}
+
+/* Debut des ptite description */
+/* Pour placer les textes */
+.a-1-txt, .a-2-txt, .a-3-txt {
+    padding: 2rem 4rem;
+}
+
+/* Pour les titres */
+.a-1-txt h3, .a-2-txt h3, .a-3-txt h3{
+    font-family: 'Source Sans Pro';
+    font-size: 20px;
+    margin-left: 3.5rem;
+    margin-bottom: 12px;
+}
+/* Pour les paragraphe */
+.be-fore:before{
+    content: url("Coding-Challenge_assets/img/arrow.png");
+    vertical-align: sub;
+    margin-left: -1.6rem;
+    margin-right: .6rem;
+}
+
+/* Pour les petites description des 2 derniers textes */
+.a-2-txt h4, .a-3-txt h4{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Pour bien placer les "Read More" */
+.a-2-txt p, .a-3-txt p{
+    margin-bottom: 2rem;
+}
+
+/* Pour les mobiles, que ce soit plus aérés */
+.a-3-txt{
+    margin-bottom: 2rem;
+}
+.read-more{
+    color: #E5F8FF;
+    background: #564D48;
+    margin-top: 2rem;
+    margin-left: .5rem;   
+    padding: .5rem 1rem 1.5rem;
+    -webkit-transition: .3s padding;
+    -o-transition: .3s padding;
+    transition: .3s padding;
+}
+.read-more:hover{
+    padding: .6rem 1.2rem 1.7rem;
+}
+
+/* Le footer */
+/* La phrase du logo */
+.designer{
+    margin: 1.4rem 0 1.2rem 1.4rem;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+/* Pour bien aligner le logo */
+.space-logo{
+    margin-bottom: -.2rem;
+    margin-left: -.2rem;
+}
+
+/* Les réseaux sociaux */
+.reseaux{
+    overflow: hidden;
+    height: 6.5rem;
+}
+
+/* Les reseaux sociaux en logo */
+.reseaux-sociaux{
+    background: no-repeat url("Coding-Challenge_assets/img/reseaux.png") right 0;
+    height: 2rem;
+    margin-top: -4rem;
+    padding: 0 6rem;
+}
+.reseaux-sociaux:hover{
+    background: no-repeat url("Coding-Challenge_assets/img/reseaux.png") right 0;
+    height: 4rem;
+    margin-top: -7rem;
+}
+
+
+/* Les @keyframes (animations) */
+@-webkit-keyframes change-image{
+    0%{
+        background: url("Coding-Challenge_assets/img/slider1.jpg") no-repeat;
+    }
+    50%{
+        background: url("Coding-Challenge_assets/img/slider2.jpg") no-repeat;
+    }
+    100%{
+        background: url("Coding-Challenge_assets/img/slider3.jpeg") no-repeat;
+    }
+}
+@keyframes change-image{
+    0%{
+        background: url("Coding-Challenge_assets/img/slider1.jpg") no-repeat;
+    }
+    50%{
+        background: url("Coding-Challenge_assets/img/slider2.jpg") no-repeat;
+    }
+    100%{
+        background: url("Coding-Challenge_assets/img/slider3.jpeg") no-repeat;
+    }
+}
+
+/* Le responsive */
+@media only screen and (max-width: 615px) {
+    .navbar{
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    }
+}
+@media only screen and (min-width: 815px) {
+    .bouton-nav{
+        margin: 0 1.4rem;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .bouton-nav{
+        margin: 0 3rem;
+    }
+    .img-cover{
+    margin: 12.5091%;
+    }
+    .flex-g-e{
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 1300px) {
+    .cards{
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    }
+    .les-3-text{
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    }
+}
